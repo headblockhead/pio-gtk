@@ -35,10 +35,11 @@
     "gomod2nix": {
       "inputs": {
         "flake-utils": [
-          "gotk4-nix",
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1770585520,
@@ -60,7 +61,9 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "gomod2nix": "gomod2nix",
+        "gomod2nix": [
+          "gomod2nix"
+        ],
         "nixpkgs": [
           "nixpkgs"
         ]
@@ -81,48 +84,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1755864489,
-        "narHash": "sha256-ojoEEg2c8gTyV+9sZzPWiMgtsXoqTkY/8k7tEqn9TQo=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "f24c0439ea1296e295445e0d8117d282bdacaa9a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "master",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-gotk4": {
-      "locked": {
-        "lastModified": 1790113641,
-        "narHash": "sha256-D2aaQetafdpHxbwA4ldAxs51UX0b11pXL+JL/5L8VrM=",
+        "lastModified": 1780145889,
+        "narHash": "sha256-md0zn0RnwNvPyASas1yG5YUuwQ4ALA6ucL50l0DvqCo=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "1bc55b9def8165e82073919945c3239903fe4dc2",
+        "rev": "8c50a710ddca43d7a530fb805ad55bde8d0141c5",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-26.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1790046670,
-        "narHash": "sha256-MYiI+CzL0tuWgRPjGsKCDHqYs2T3OzMlMQWOYWG0qso=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "6774f7bc253789b113a4f39285dc0fa100abeacc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
+        "ref": "26.05",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -130,9 +101,9 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "gomod2nix": "gomod2nix",
         "gotk4-nix": "gotk4-nix",
-        "nixpkgs": "nixpkgs_2",
-        "nixpkgs-gotk4": "nixpkgs-gotk4"
+        "nixpkgs": "nixpkgs"
       }
     },
     "systems": {
