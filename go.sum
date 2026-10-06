@@ -4,5 +4,11 @@ github.com/diamondburned/gotk4/pkg v0.4.1 h1:w4BwVUUBkKyNLz5HKHN2Oz3kZCTLHfpfKgB
 github.com/diamondburned/gotk4/pkg v0.4.1/go.mod h1:BAEEDXtj5srQ1S2++5HX2K1s9c6CtuWSa60dAywrkRM=
 github.com/headblockhead/pio v0.0.0-20260929142827-8f8ad084dcba h1:++pyU1jyxmfEr7Zi0jMhH4hgFFQ3oYMyw8gQDxcBJM0=
 github.com/headblockhead/pio v0.0.0-20260929142827-8f8ad084dcba/go.mod h1:vGpm7nLSTUHlHjoJcUrTIdb2mGE+xKi2IPSx5zQDUu0=
+github.com/headblockhead/pio v0.0.0-20261005195159-5cb37ca2c13a h1:GVWpxgVmM7A+fEtkHdAy1ZD6KasQUtcRbjSiUfJoP3A=
+github.com/headblockhead/pio v0.0.0-20261005195159-5cb37ca2c13a/go.mod h1:vGpm7nLSTUHlHjoJcUrTIdb2mGE+xKi2IPSx5zQDUu0=
+github.com/headblockhead/pio v0.0.0-20261006200809-18960187dadc h1:Uxt2gA68CLDTGY5P74KS1o1s44T2jA6+qvNwF9kjlfs=
+github.com/headblockhead/pio v0.0.0-20261006200809-18960187dadc/go.mod h1:vGpm7nLSTUHlHjoJcUrTIdb2mGE+xKi2IPSx5zQDUu0=
+github.com/headblockhead/pio v0.0.0-20261006201519-d6338329a4ad h1:WmoaEJHOC0moowZL8irrseb8kSz7v8aM6vuyvUGhYR8=
+github.com/headblockhead/pio v0.0.0-20261006201519-d6338329a4ad/go.mod h1:vGpm7nLSTUHlHjoJcUrTIdb2mGE+xKi2IPSx5zQDUu0=
 golang.org/x/sync v0.0.0-20210220032951-036812b2e83c h1:5KslGYwFpkhGh+Q16bwMP3cOontH8FOep7tGV86Y7SQ=
 golang.org/x/sync v0.0.0-20210220032951-036812b2e83c/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
