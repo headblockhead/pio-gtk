@@ -9,10 +9,6 @@ schema = 3
     version = 'v0.4.1'
     hash = 'sha256-ByHw9QuTw3gYsalDt+HUCLYZjL6sEX+aE63lOlwX8wc='
 
-  [mod.'github.com/headblockhead/pio']
-    version = 'v0.0.0-20260929142827-8f8ad084dcba'
-    hash = 'sha256-hFbRUu2QAf0izyMHNEqnx9uYSh9ux5z2X4hoKzotjVE='
-
   [mod.'golang.org/x/sync']
     version = 'v0.0.0-20210220032951-036812b2e83c'
     hash = 'sha256-qyBoAsnVWZyQM7UkJ573EjijMHK0q5mVoY/o4a8Agr4='

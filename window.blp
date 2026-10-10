@@ -1,0 +1,42 @@
+using Gtk 4.0;
+
+ApplicationWindow main_window {
+  title: "GTK4 Side Panel via Blueprint";
+  default-width: 800;
+  default-height: 500;
+
+  Box layout_box {
+    orientation: horizontal;
+
+    // Sidebar panel
+    Box sidebar_box {
+      orientation: vertical;
+      width-request: 220;
+
+      Label sidebar_title {
+        label: "My Sidebar";
+        margin-top: 15;
+      }
+
+      Button nav_button {
+        label: "Navigate";
+        margin-top: 10;
+        margin-bottom: 10;
+        margin-start: 10;
+        margin-end: 10;
+      }
+    }
+
+    // Main workspace area
+    Box main_workspace {
+      orientation: vertical;
+      hexpand: true;
+      vexpand: true;
+
+      Label {
+        label: "Main Content Loaded via Blueprint!";
+      }
+    }
+  }
+}
+
