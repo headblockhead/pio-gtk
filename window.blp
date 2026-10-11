@@ -1,42 +1,59 @@
 using Gtk 4.0;
+using Adw 1;
 
-ApplicationWindow main_window {
-  title: "GTK4 Side Panel via Blueprint";
+Adw.ApplicationWindow window {
+  title: "Rubus";
   default-width: 800;
-  default-height: 500;
+  default-height: 800;
 
-  Box layout_box {
-    orientation: horizontal;
+  Adw.Breakpoint {
+    condition ("max-width: 550sp")
 
-    // Sidebar panel
-    Box sidebar_box {
-      orientation: vertical;
-      width-request: 220;
-
-      Label sidebar_title {
-        label: "My Sidebar";
-        margin-top: 15;
-      }
-
-      Button nav_button {
-        label: "Navigate";
-        margin-top: 10;
-        margin-bottom: 10;
-        margin-start: 10;
-        margin-end: 10;
-      }
-    }
-
-    // Main workspace area
-    Box main_workspace {
-      orientation: vertical;
-      hexpand: true;
-      vexpand: true;
-
-      Label {
-        label: "Main Content Loaded via Blueprint!";
-      }
+    setters {
+      split_view.collapsed: true;
+      sidebar.mode: page;
     }
   }
-}
 
+  content: Adw.NavigationSplitView split_view {
+    sidebar: Adw.NavigationPage {
+      title: "Devices";
+
+      Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {}
+
+        Adw.ViewSwitcherSidebar sidebar {
+          stack: content_stack;
+        }
+      }
+    };
+
+    content: Adw.NavigationPage {
+      title: "Rubus";
+
+      Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {}
+
+        Adw.ViewStack content_stack {
+          Adw.ViewStackPage {
+            title: "Awesome Page 1";
+
+            child: Adw.StatusPage {
+              title: "something to go here in future";
+            };
+          }
+
+          Adw.ViewStackPage {
+            title: "Awesome Page 2";
+
+            child: Adw.StatusPage {
+              title: "something else to go here in future as well";
+            };
+          }
+        }
+      }
+    };
+  };
+}

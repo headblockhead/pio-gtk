@@ -2,7 +2,6 @@ package main
 
 import (
 	_ "embed"
-	"fmt"
 	"os"
 
 	"github.com/diamondburned/gotk4-adwaita/pkg/adw"
@@ -14,27 +13,20 @@ import (
 var uiXML string
 
 func main() {
-	app := adw.NewApplication("com.example.blueprint", gio.ApplicationFlagsNone)
+	println("running")
+
+	app := adw.NewApplication("dev.edwardh.rubus", gio.ApplicationFlags(gio.ApplicationDefaultFlags))
 
 	app.ConnectActivate(func() {
-		// Initialize the builder using the embedded UI XML
 		builder := gtk.NewBuilderFromString(uiXML)
 
-		obj := builder.GetObject("main_window")
-		if obj == nil {
-			fmt.Println("Error: could not find main_window object")
-			return
+		windowObject := builder.GetObject("window")
+		if windowObject == nil {
+			panic("no window")
 		}
 
-		// FIX 1: Safely cast the object to your UI window type
-		win := obj.Cast().(*gtk.Window)
-		app.AddWindow(win)
-
-		btnObj := builder.GetObject("nav_button")
-		if btnObj != nil {
-
-		}
-
+		win := windowObject.Cast().(*adw.ApplicationWindow)
+		win.SetApplication(&app.Application)
 		win.Present()
 	})
 

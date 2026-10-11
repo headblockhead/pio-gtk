@@ -56,6 +56,7 @@
         devShells.default = gotk4.mkShell {
           buildInputs = [
             gomod2nix.packages.${system}.default
+            pkgs.blueprint-compiler
           ];
         };
       }
